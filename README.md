@@ -1,7 +1,5 @@
 # SmartShopper Assistant
 
-## Deskripsi
-
 SmartShopper Assistant adalah AI Assistant sederhana yang digunakan untuk menjawab pertanyaan umum e-commerce dan memberikan rekomendasi produk.
 
 Project ini menggunakan MongoDB Atlas untuk menyimpan data FAQ, Sentence Transformer untuk retrieval, dan Groq sebagai LLM.
@@ -25,6 +23,9 @@ smartshopper_assistant/
 ├── requirements.txt
 └── README.md
 ```
+## Clone Repository
+git clone https://github.com/msalmanriza/smartshopper-assistant.git
+cd smartshopper-assistant
 
 ## Menjalankan Project
 
