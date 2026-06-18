@@ -24,7 +24,7 @@ smartshopper_assistant/
 └── README.md
 ```
 ## Clone Repository
-git clone https://github.com/msalmanriza/smartshopper-assistant.git
+git clone https://github.com/msalmanriza/smartshopper-assistant
 cd smartshopper-assistant
 
 ## Menjalankan Project
