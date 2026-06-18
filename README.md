@@ -1,16 +1,17 @@
 # SmartShopper Assistant
 
-SmartShopper Assistant adalah AI Assistant sederhana yang dibuat untuk membantu pengguna mencari informasi umum toko dan memberikan rekomendasi produk berdasarkan kebutuhan pengguna.
+## Deskripsi
 
-Project ini menggunakan MongoDB sebagai penyimpanan data FAQ, Sentence Transformer untuk membuat embedding, dan Groq sebagai Large Language Model (LLM).
+SmartShopper Assistant adalah AI Assistant sederhana yang digunakan untuk menjawab pertanyaan umum e-commerce dan memberikan rekomendasi produk.
+
+Project ini menggunakan MongoDB Atlas untuk menyimpan data FAQ, Sentence Transformer untuk retrieval, dan Groq sebagai LLM.
 
 ## Fitur
 
-* Menjawab pertanyaan umum toko
+* Menjawab pertanyaan umum (pengiriman, pembayaran, refund, akun)
 * Memberikan rekomendasi produk
-* Menggunakan MongoDB Atlas sebagai database
-* Retrieval informasi berdasarkan kemiripan pertanyaan
-* Integrasi dengan Groq API
+* Routing otomatis berdasarkan pertanyaan user
+* Penyimpanan data menggunakan MongoDB Atlas
 
 ## Struktur Project
 
@@ -18,34 +19,16 @@ Project ini menggunakan MongoDB sebagai penyimpanan data FAQ, Sentence Transform
 smartshopper_assistant/
 │
 ├── data/
-│   └── common_info.json
-│
 ├── scripts/
-│   ├── store_data.py
-│   ├── test_connection.py
-│   └── test_retrieval.py
-│
 ├── tools/
-│   ├── common_info.py
-│   └── product.py
-│
 ├── app.py
-├── .env
-├── .env.example
 ├── requirements.txt
 └── README.md
 ```
 
-## Instalasi
+## Menjalankan Project
 
-Clone repository:
-
-```bash
-git clone https://github.com/msalmanriza
-cd smartshopper_assistant
-```
-
-Install dependency:
+Install library:
 
 ```bash
 pip install -r requirements.txt
@@ -54,39 +37,41 @@ pip install -r requirements.txt
 Buat file `.env`:
 
 ```env
-MONGO_URI=your_mongodb_connection
+MONGO_URI=your_mongodb_uri
 GROQ_API_KEY=your_groq_api_key
 ```
 
-## Menyimpan Data ke MongoDB
-
-Jalankan:
+Simpan data ke MongoDB:
 
 ```bash
 python scripts/store_data.py
 ```
 
-## Menjalankan Assistant
+Jalankan aplikasi:
 
 ```bash
 python app.py
 ```
 
-Contoh pertanyaan:
+## Contoh Pertanyaan
 
-* Bagaimana cara membuat akun?
-* Apa metode pembayaran yang tersedia?
-* Saya ingin mencari laptop gaming
-* Rekomendasi smartphone
+```text
+bagaimana cara membuat akun?
 
-## Teknologi yang Digunakan
+berapa lama pengiriman?
+
+saya ingin laptop gaming
+
+rekomendasi mouse gaming
+```
+
+## Teknologi
 
 * Python
 * MongoDB Atlas
 * Sentence Transformers
 * Groq API
-* PyMongo
 
-## Hasil
+## Author
 
-Assistant dapat mengambil informasi dari database MongoDB dan memberikan jawaban sesuai konteks pertanyaan pengguna.
+Salmanrizaa
